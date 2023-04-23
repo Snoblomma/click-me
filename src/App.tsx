@@ -108,7 +108,7 @@ function App() {
           width={1600}
         />
       }
-      <header className="App-header">
+      <div className="App-content">
         <div className="App-logo" >
           {(status === Status.notStarted || status === Status.pending) &&
             <Logo />
@@ -132,7 +132,7 @@ function App() {
           <div className="bar shadow dots" ref={progressRef}>
           </div>
         </div>
-        <div style={{ height: '1.5rem', display: 'block' }}>
+        <div style={{ height: '1.5rem', display: 'block', maxWidth: '90%' }}>
           {
             (status === Status.pending && <>
               {timeLeft === 0 ? <span>You can release now ฅ^•ﻌ•^ฅ</span> : <TypeAnimation
@@ -152,7 +152,7 @@ function App() {
             status === Status.error && <span>Try holding on for longer next time ( ب_ب)</span>
           }
         </div>
-      </header>
+      </div>
     </div>
   );
 }
