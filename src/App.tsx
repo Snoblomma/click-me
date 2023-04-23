@@ -87,11 +87,11 @@ function App() {
   )
 
   const sequence = useMemo(() => {
-    const suffled = shuffleArray(prompts).map((e) => [e, 1500]).flat()
+    const shuffled = shuffleArray(prompts).map((e) => [e, 1500]).flat()
     return [
       "Let's start!",
       2500,
-      ...suffled,
+      ...shuffled,
       () => {
         console.log('Sequence completed');
       }
@@ -120,7 +120,8 @@ function App() {
             <Sad />
           }
         </div>
-        <button className="big-button"
+        <button
+          className="big-button"
           onMouseDown={onMouseDown}
           onTouchStart={onMouseDown}
         >

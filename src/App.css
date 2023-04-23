@@ -50,6 +50,7 @@ button.big-button {
   transform-style: preserve-3d;
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
   margin-bottom: 2rem;
+  user-select: none;
 }
 
 button.big-button::before {
