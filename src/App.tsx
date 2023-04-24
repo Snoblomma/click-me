@@ -108,8 +108,8 @@ function App() {
           width={1600}
         />
       }
-      <div className="App-content">
-        <div className="App-logo" >
+      <div className="content">
+        <div className="logo" >
           {(status === Status.notStarted || status === Status.pending) &&
             <Logo />
           }
@@ -121,7 +121,7 @@ function App() {
           }
         </div>
         <button
-          className="big-button"
+          className="cta"
           onMouseDown={onMouseDown}
           onTouchStart={onMouseDown}
         >
@@ -133,7 +133,7 @@ function App() {
           <div className="bar shadow dots" ref={progressRef}>
           </div>
         </div>
-        <div style={{ height: '1.5rem', display: 'block', maxWidth: '90%' }}>
+        <div className="propmts">
           {
             (status === Status.pending && <>
               {timeLeft === 0 ? <span>You can release now ฅ^•ﻌ•^ฅ</span> : <TypeAnimation
